@@ -11,7 +11,7 @@ public class ShowColumnName {
 		try
 		{
 		Class.forName("org.h2.Driver");
-		Connection conn=DriverManager.getConnection("jdbc:h2:tcp://localhost/~/test1","admin","niit2016");
+		Connection conn=DriverManager.getConnection("jdbc:h2:tcp://localhost/~/test2","admin","niit2016");
 		Statement stmt=conn.createStatement();
 		ResultSet rs=stmt.executeQuery("Select * from Student");
 		
@@ -28,8 +28,8 @@ public class ShowColumnName {
 		while(rs.next());
 		{
 			System.out.println(rs.getInt(1)+"	");
-			System.out.println(rs.getInt(2)+"		");
-			System.out.println(rs.getInt(3)+"			");
+			System.out.println(rs.getString(2)+"		");
+			System.out.println(rs.getString(3)+"			");
 		}
 		stmt.close();
 		conn.close();

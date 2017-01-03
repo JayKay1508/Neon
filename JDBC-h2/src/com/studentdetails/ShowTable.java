@@ -11,7 +11,7 @@ public class ShowTable {
 		try
 		{
 		Class.forName("org.h2.Driver");
-		Connection conn=DriverManager.getConnection("jdbc:h2:tcp://localhost/~/test1","admin","niit2016");
+		Connection conn=DriverManager.getConnection("jdbc:h2:tcp://localhost/~/test2","admin","niit2016");
 		Statement stmt=conn.createStatement();
 		ResultSet rs=stmt.executeQuery("Select * from Student");
 		
